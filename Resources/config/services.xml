@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="evp_gsms.client.class">Evp_Gsms_Client</parameter>
+    </parameters>
+
+    <services>
+        <!-- Client -->
+        <service id="evp_gsms.client" class="%evp_gsms.client.class%" factory-class="%evp_gsms.client.class%" factory-method="newInstance">
+            <argument>%evp_gsms.credentials.username%</argument>
+            <argument>%evp_gsms.credentials.password%</argument>
+        </service>
+    </services>
+</container>
