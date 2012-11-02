@@ -52,7 +52,7 @@ That's it, you are now ready to use GsmsBundle.
 
 ##Code samples
 Once the bundle is installed the dependency container will contain evp_gsms.client service,
-which can be used to access the methods of [Evp_Gsms_Client](https://github.com/evp/GsmsPHPClient#code-samples)
+which can be used to access the methods of GsmsPHPClient
 
 Use the client to send your first sms
 
