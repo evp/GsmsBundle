@@ -16,7 +16,7 @@ GsmsBundle is a small bundle that can serve as a bridge between your Symfony fra
 ##Installation
 * Create the following directory structure for the required library: vendor/evp/gsms-php-client
 * Use ```git clone https://github.com/evp/GsmsPHPClient``` in your vendor/evp/gsms-php-client directory to retrieve the GsmsPHPClient
-* Now create the directory structure for the bundle itself : vendor/evp/gsms-bundle
+* Now create the directory structure for the bundle itself: vendor/evp/gsms-bundle
 * Use ```git clone https://github.com/evp/GsmsBundle.git``` in vendor/evp/gsms-bundle directory to retrieve the GsmsBundle bundle
 * Add the following code to your app/autoload.php:
 
