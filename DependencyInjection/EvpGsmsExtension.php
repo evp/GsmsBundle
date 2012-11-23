@@ -30,6 +30,12 @@ class EvpGsmsExtension extends Extension
             $container->setParameter('evp_gsms.credentials.password', $config['credentials']['password']);
         }
 
+        $container->setParameter('evp_gsms.from', isset($config['from']) ? $config['from'] : null);
+        $container->setParameter(
+            'evp_gsms.callback_uri',
+            isset($config['callback_uri']) ? $config['callback_uri'] : null
+        );
+
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
     }

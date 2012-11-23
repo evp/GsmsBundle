@@ -44,9 +44,12 @@ evp_gsms:
   credentials:
     username: your_username
     password: your_password
+  from: my_phone_number
+  callback_uri: "http://example.com/callback"
 ```
 
-Don't forget to replace *your_username* and *your_password* with the actual credentials.
+Don't forget to replace *your_username*, *your_password* other parameters with the actual values.
+`from` and `callback_uri` parameters are optional.
 
 That's it, you are now ready to use GsmsBundle.
 

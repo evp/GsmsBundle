@@ -28,6 +28,8 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('password')->isRequired()->end()
                     ->end()
                 ->end()
+                ->scalarNode('from')->end()
+                ->scalarNode('callback_uri')->end()
             ->end();
 
         return $treeBuilder;

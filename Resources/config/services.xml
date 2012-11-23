@@ -13,6 +13,8 @@
         <service id="evp_gsms.client" class="%evp_gsms.client.class%" factory-class="%evp_gsms.client.class%" factory-method="newInstance">
             <argument>%evp_gsms.credentials.username%</argument>
             <argument>%evp_gsms.credentials.password%</argument>
+            <argument>%evp_gsms.from%</argument>
+            <argument>%evp_gsms.callback_uri%</argument>
         </service>
     </services>
 </container>
