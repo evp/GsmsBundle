@@ -1,6 +1,6 @@
 {
     "name": "evp/gsms-bundle",
-    "description": "Symfony2 bundle form gsms.lt provided services",
+    "description": "Symfony2 bundle for gsms.lt provided services",
     "minimum-stability": "dev",
     "authors": [
         {
