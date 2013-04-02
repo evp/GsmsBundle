@@ -1,0 +1,18 @@
+{
+    "name": "evp/gsms-bundle",
+    "description": "Symfony2 bundle form gsms.lt provided services",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "gsms.lt",
+            "homepage": "http://www.gsms.lt/"
+        }
+    ],
+    "require": {
+        "evp/gsms-php-client": "*"
+    },
+    "autoload": {
+        "psr-0": { "Evp\\Bundle\\GsmsBundle": "" }
+    },
+    "target-dir": "Evp/Bundle/GsmsBundle"
+}
