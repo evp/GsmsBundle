@@ -53,7 +53,7 @@ $loader->registerNamespaces(array(
 
 $loader->registerPrefixes(array(
     // ...
-    'Evp_' => __DIR__.'/../vendor/evp/gsms-php-client/src',
+    'Evp_' => __DIR__.'/../vendor/evp/gsms-php-client/src	',
 ));
 ```
 
@@ -70,6 +70,17 @@ public function registerBundles()
         new Evp\Bundle\GsmsBundle\EvpGsmsBundle(),
     );
 }
+```
+
+* Configure your app/config/config.yml
+
+```yml
+evp_gsms:
+  credentials:
+    username: your_username
+    password: your_password
+  from: my_phone_number
+  callback_uri: "http://example.com/callback"
 ```
 
 ###Symfony 2.1 installation (vendor)
@@ -97,6 +108,22 @@ public function registerBundles()
     );
 }
 ```
+
+* Configure your app/config/config.yml
+
+```yml
+evp_gsms:
+  credentials:
+    username: your_username
+    password: your_password
+  from: my_phone_number
+  callback_uri: "http://example.com/callback"
+```
+
+Don't forget to replace *your_username*, *your_password* other parameters with the actual values.
+`from` and `callback_uri` parameters are optional.
+
+That's it, you are now ready to use GsmsBundle.
 
 ##Code samples
 Once the bundle is installed the dependency container will contain evp_gsms.client service,
