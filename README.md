@@ -18,15 +18,18 @@ GsmsBundle is a small bundle that can serve as a bridge between your Symfony fra
 ###Symfony 2.0.* installation (deps)
 * Add the following lines in your `deps` file:
 ``` ini
+
 [GsmsPHPClient]
     git=https://github.com/evp/GsmsPHPClient.git
     target=/evp/gsms-php-client
 ```
+
 ``` ini
 [GsmsBundle]
     git=https://github.com/evp/GsmsBundle
     target=/bundles/Evp/Bundle/GsmsBundle
 ```
+
 * Run the vendors script to download the bundle:
 
 ``` bash
