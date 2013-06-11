@@ -33,52 +33,69 @@ GsmsBundle is a small bundle that can serve as a bridge between your Symfony fra
 $ php bin/vendors install
 ```
 
-###Symfony 2.1 installation (vendor)
-* Create the following directory structure for the required library: vendor/evp/gsms-php-client
-* Use ```git clone https://github.com/evp/GsmsPHPClient``` in your vendor/evp/gsms-php-client directory to retrieve the GsmsPHPClient
-* Now create the directory structure for the bundle itself: vendor/evp/gsms-bundle
-* Use ```git clone https://github.com/evp/GsmsBundle.git``` in vendor/evp/gsms-bundle directory to retrieve the GsmsBundle bundle
-* Add the following code to your app/autoload.php:
+* Add the Evp namespace to your autoloader:
 
 ``` php
-  $loader->add('Evp', __DIR__.'/../vendor/evp');
-```
-* Update your AppKernel by referencing the new bundle:
+<?php
+// app/autoload.php
 
-```php
-    public function registerBundles()
-    {
-        $bundles = array(
-            //... your existing bundles here
-            new Evp\Bundle\GsmsBundle\EvpGsmsBundle(),
-        );
-
-        // ...
-    }
+$loader->registerNamespaces(array(
+    // ...
+    'Evp' => __DIR__.'/../vendor/bundles',
+));
 ```
 
-* Configure your app/config/config.yml
+* Register prefixes
 
-```yml
-evp_gsms:
-  credentials:
-    username: your_username
-    password: your_password
-  from: my_phone_number
-  callback_uri: "http://example.com/callback"
+``` php
+<?php
+// app/autoload.php
+
+$loader->registerPrefixes(array(
+    // ...
+    'Evp_' => __DIR__.'/../vendor/evp/gsms-php-client/src',
+));
 ```
 
-Don't forget to replace *your_username*, *your_password* other parameters with the actual values.
-`from` and `callback_uri` parameters are optional.
+* Finally, enable the bundle in the kernel:
 
-That's it, you are now ready to use GsmsBundle.
+``` php
+<?php
+// app/AppKernel.php
 
-###Composer installation
-* Run ``` bash
+public function registerBundles()
+{
+    $bundles = array(
+        //... your existing bundles here
+        new Evp\Bundle\GsmsBundle\EvpGsmsBundle(),
+    );
+}
+```
+
+###Symfony 2.1 installation (vendor)
+* Execute these commands:
+
+``` bash
     composer require evp/gsms-php-client dev-master
 ```
-* Run ``` bash
+
+``` bash
    composer require evp/gsms-bundle dev-master
+```
+
+* Enable the bundle in the kernel:
+
+``` php
+<?php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        //... your existing bundles here
+        new Evp\Bundle\GsmsBundle\EvpGsmsBundle(),
+    );
+}
 ```
 
 ##Code samples
