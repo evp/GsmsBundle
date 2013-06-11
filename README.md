@@ -17,7 +17,7 @@ GsmsBundle is a small bundle that can serve as a bridge between your Symfony fra
 
 ###Symfony 2.0.* installation (deps)
 * Add following code to your ```deps``` file located in symfony root directory
-```
+``` ini
 [GsmsPHPClient]
     git=https://github.com/evp/GsmsPHPClient.git
     target=/evp/gsms-php-client
@@ -26,7 +26,11 @@ GsmsBundle is a small bundle that can serve as a bridge between your Symfony fra
     git=https://github.com/evp/GsmsBundle
     target=/bundles/Evp/Bundle/GsmsBundle
 ```
-* Run ```bin/vendors install``` in symfony root directory
+* Run the vendors script to download the bundle:
+
+``` bash
+$ php bin/vendors install
+```
 
 ###Symfony 2.1 installation (vendor)
 * Create the following directory structure for the required library: vendor/evp/gsms-php-client
@@ -69,10 +73,12 @@ Don't forget to replace *your_username*, *your_password* other parameters with t
 That's it, you are now ready to use GsmsBundle.
 
 ###Composer installation
-* Add following ```{
-    "require": {
-        "evp/gsms-bundle": "dev-master"
-}``` to composer.json file and run ```composer update```
+* Run ``` bash
+    composer require evp/gsms-php-client dev-master
+```
+* Run ``` bash
+   composer require evp/gsms-bundle dev-master
+```
 
 ##Code samples
 Once the bundle is installed the dependency container will contain evp_gsms.client service,
