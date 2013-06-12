@@ -53,7 +53,7 @@ $loader->registerNamespaces(array(
 
 $loader->registerPrefixes(array(
     // ...
-    'Evp_' => __DIR__.'/../vendor/evp/gsms-php-client/src	',
+    'Evp_' => __DIR__.'/../vendor/evp/gsms-php-client/src',
 ));
 ```
 
