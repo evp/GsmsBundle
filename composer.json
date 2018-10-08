@@ -1,7 +1,7 @@
 {
     "name": "evp/gsms-bundle",
-    "description": "Symfony2 bundle for gsms.lt provided services",
-    "minimum-stability": "dev",
+    "description": "Symfony bundle for gsms.lt provided services",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "gsms.lt",
@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "evp/gsms-php-client": "*"
+        "evp/gsms-php-client": "*",
+        "symfony/symfony": "^2.8||^3.4"
     },
     "autoload": {
         "psr-0": { "Evp\\Bundle\\GsmsBundle": "" }
